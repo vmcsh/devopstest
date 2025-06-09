@@ -3,7 +3,7 @@
 ################################################################################
 
 resource "aws_key_pair" "this" {
-  key_name   = "mahi-key"                             # Name of the key pair in AWS
+  key_name   = "test-key"                             # Name of the key pair in AWS
   #public_key = file("C:/Users/YourName/.ssh/id_rsa.pub") 
   public_key = file("C:\\Users\\Shravani\\.ssh\\id_rsa.pub")  # Ensure this file exists
 }
