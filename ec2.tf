@@ -12,14 +12,14 @@ data "aws_ami" "amzn-linux-2023-ami" {
   }
 }
 
-module "ec2_instance" {
+module "ec2_testinstance" {
   source = "./ec2"  # Adjust path to match your directory structure
 
   ami           = data.aws_ami.amzn-linux-2023-ami.id
   instance_type               = "t3.micro"
   availability_zone           = "ap-south-1c"
   subnet_id                   = "subnet-030a53a5384c43cc2"
-  key_name                    = "mahesh-key"
+  key_name                    = "test-key"
   iam_instance_profile_arm    = "test_role"
 
   volume_size                 = 8
